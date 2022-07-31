@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vH;
+    font-family: 'Courier New', cursive;
+    background-image: linear-gradient(to right, #2c3e50, #4ca1af);
+
+}
+
+.cards{
+    display: flex;
+    width: 1000px;
+}
+
+.card {
+    position: relative;
+    margin: 10px;
+    height: 800px;
+    width: 400px;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.cardOne {
+    background-image: url(./img/empire-state-building-g6a2b589a8_1280.jpg);
+}
+
+.cardTwo {
+    background-image: url(./img/sevilla-tower-g5fbf7a802_640.jpg);
+}
+
+button {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: #ffff;
+    font-size: 36px;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    cursor: crosshair;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.8);
+    clip-path: circle(0% at 50% 90%);
+    transition: clip-path 3s;
+}
+
+table{
+    margin-right: 40px;
+    margin-left: 40px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+tr {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+}
+
+h1 {
+    color: rgb(128, 126, 75);
+}
+
+button:hover ~ .text{
+    clip-path: circle(120% at 50% 100%);
+}
