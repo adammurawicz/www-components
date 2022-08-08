@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vH;
+    background-color: #333;
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+.cookie-box {
+    position: fixed;
+    bottom: 0;
+    padding: 2em;
+    font-size: 2rem;
+    height: 300px;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: showCookies .6s .6s forwards;
+}
+
+.cookie-box::before {
+    position: absolute;
+    top: -200px;
+    right: 50px;
+    height: 400px;
+    width: 400px;
+    background-image: url('./cookieMonster.png');
+    background-size: cover;
+    content: '';
+}
+
+.cookie-btn {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    font-size: 1.6rem;
+    border: 5px solid rgb(27, 158, 90);
+    border-radius: 8px;
+    background-color: rgb(188, 121, 51);
+    color: #fff;
+    transition: background-color .3s;
+    cursor: pointer;
+}
+
+.cookie-btn:hover {
+    background-color: rgb(149, 84, 15);
+}
+
+@keyframes showCookies {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
